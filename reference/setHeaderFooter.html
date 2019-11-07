@@ -18,8 +18,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -169,20 +169,20 @@
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code>addWorksheet</code> to set headers and footers when adding a worksheet</p></div>
+    <div class='dont-index'><p><code><a href='addWorksheet.html'>addWorksheet</a></code> to set headers and footers when adding a worksheet</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>wb</span> <span class='kw'>&lt;-</span> <span class='fu'>createWorkbook</span>()
+    <pre class="examples"><div class='input'><span class='no'>wb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='createWorkbook.html'>createWorkbook</a></span>()
 
-<span class='fu'>addWorksheet</span>(<span class='no'>wb</span>, <span class='st'>"S1"</span>)
-<span class='fu'>addWorksheet</span>(<span class='no'>wb</span>, <span class='st'>"S2"</span>)
-<span class='fu'>addWorksheet</span>(<span class='no'>wb</span>, <span class='st'>"S3"</span>)
-<span class='fu'>addWorksheet</span>(<span class='no'>wb</span>, <span class='st'>"S4"</span>)
+<span class='fu'><a href='addWorksheet.html'>addWorksheet</a></span>(<span class='no'>wb</span>, <span class='st'>"S1"</span>)
+<span class='fu'><a href='addWorksheet.html'>addWorksheet</a></span>(<span class='no'>wb</span>, <span class='st'>"S2"</span>)
+<span class='fu'><a href='addWorksheet.html'>addWorksheet</a></span>(<span class='no'>wb</span>, <span class='st'>"S3"</span>)
+<span class='fu'><a href='addWorksheet.html'>addWorksheet</a></span>(<span class='no'>wb</span>, <span class='st'>"S4"</span>)
 
-<span class='fu'>writeData</span>(<span class='no'>wb</span>, <span class='fl'>1</span>, <span class='fl'>1</span>:<span class='fl'>400</span>)
-<span class='fu'>writeData</span>(<span class='no'>wb</span>, <span class='fl'>2</span>, <span class='fl'>1</span>:<span class='fl'>400</span>)
-<span class='fu'>writeData</span>(<span class='no'>wb</span>, <span class='fl'>3</span>, <span class='fl'>3</span>:<span class='fl'>400</span>)
-<span class='fu'>writeData</span>(<span class='no'>wb</span>, <span class='fl'>4</span>, <span class='fl'>3</span>:<span class='fl'>400</span>)
+<span class='fu'><a href='writeData.html'>writeData</a></span>(<span class='no'>wb</span>, <span class='fl'>1</span>, <span class='fl'>1</span>:<span class='fl'>400</span>)
+<span class='fu'><a href='writeData.html'>writeData</a></span>(<span class='no'>wb</span>, <span class='fl'>2</span>, <span class='fl'>1</span>:<span class='fl'>400</span>)
+<span class='fu'><a href='writeData.html'>writeData</a></span>(<span class='no'>wb</span>, <span class='fl'>3</span>, <span class='fl'>3</span>:<span class='fl'>400</span>)
+<span class='fu'><a href='writeData.html'>writeData</a></span>(<span class='no'>wb</span>, <span class='fl'>4</span>, <span class='fl'>3</span>:<span class='fl'>400</span>)
 
 <span class='fu'>setHeaderFooter</span>(<span class='no'>wb</span>, <span class='kw'>sheet</span> <span class='kw'>=</span> <span class='st'>"S1"</span>,
                 <span class='kw'>header</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"ODD HEAD LEFT"</span>, <span class='st'>"ODD HEAD CENTER"</span>, <span class='st'>"ODD HEAD RIGHT"</span>),
@@ -207,7 +207,7 @@
                 <span class='kw'>firstFooter</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"FIRST ONLY L"</span>, <span class='fl'>NA</span>, <span class='st'>"FIRST ONLY R"</span>))
 
 
-<span class='kw'>if</span> (<span class='fl'>FALSE</span>) <span class='fu'>saveWorkbook</span>(<span class='no'>wb</span>, <span class='st'>"setHeaderFooterExample.xlsx"</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div></pre>
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) <span class='fu'><a href='saveWorkbook.html'>saveWorkbook</a></span>(<span class='no'>wb</span>, <span class='st'>"setHeaderFooterExample.xlsx"</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -230,7 +230,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>
