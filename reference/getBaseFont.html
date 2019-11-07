@@ -18,8 +18,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -130,7 +130,7 @@ Returns the base font used in the workbook." />
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'>## create a workbook</span>
-<span class='no'>wb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='createWorkbook.html'>createWorkbook</a></span>()
+<span class='no'>wb</span> <span class='kw'>&lt;-</span> <span class='fu'>createWorkbook</span>()
 <span class='fu'>getBaseFont</span>(<span class='no'>wb</span>)</div><div class='output co'>#&gt; $size
 #&gt; $size$val
 #&gt; [1] "11"
@@ -147,7 +147,7 @@ Returns the base font used in the workbook." />
 #&gt; 
 #&gt; </div><div class='input'>
 <span class='co'>## modify base font to size 10 Arial Narrow in red</span>
-<span class='fu'><a href='modifyBaseFont.html'>modifyBaseFont</a></span>(<span class='no'>wb</span>, <span class='kw'>fontSize</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>fontColour</span> <span class='kw'>=</span> <span class='st'>"#FF0000"</span>, <span class='kw'>fontName</span> <span class='kw'>=</span> <span class='st'>"Arial Narrow"</span>)
+<span class='fu'>modifyBaseFont</span>(<span class='no'>wb</span>, <span class='kw'>fontSize</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>fontColour</span> <span class='kw'>=</span> <span class='st'>"#FF0000"</span>, <span class='kw'>fontName</span> <span class='kw'>=</span> <span class='st'>"Arial Narrow"</span>)
 
 <span class='fu'>getBaseFont</span>(<span class='no'>wb</span>)</div><div class='output co'>#&gt; $size
 #&gt; $size$val
@@ -184,7 +184,7 @@ Returns the base font used in the workbook." />
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
 </div>
 
       </footer>
