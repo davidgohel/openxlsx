@@ -18,8 +18,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">openxlsx</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">4.1.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">4.1.2.1</span>
       </span>
     </div>
 
@@ -146,15 +146,15 @@
     <p>Region is given by: min(cols):max(cols) X min(rows):max(rows)</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code>getNamedRegions</code></p></div>
+    <div class='dont-index'><p><code><a href='getNamedRegions.html'>getNamedRegions</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'>## create named regions</span>
-<span class='no'>wb</span> <span class='kw'>&lt;-</span> <span class='fu'>createWorkbook</span>()
-<span class='fu'>addWorksheet</span>(<span class='no'>wb</span>, <span class='st'>"Sheet 1"</span>)
+<span class='no'>wb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='createWorkbook.html'>createWorkbook</a></span>()
+<span class='fu'><a href='addWorksheet.html'>addWorksheet</a></span>(<span class='no'>wb</span>, <span class='st'>"Sheet 1"</span>)
 
 <span class='co'>## specify region</span>
-<span class='fu'>writeData</span>(<span class='no'>wb</span>, <span class='kw'>sheet</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>iris</span>, <span class='kw'>startCol</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>startRow</span> <span class='kw'>=</span> <span class='fl'>1</span>)
+<span class='fu'><a href='writeData.html'>writeData</a></span>(<span class='no'>wb</span>, <span class='kw'>sheet</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>iris</span>, <span class='kw'>startCol</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>startRow</span> <span class='kw'>=</span> <span class='fl'>1</span>)
 <span class='fu'>createNamedRegion</span>(<span class='kw'>wb</span> <span class='kw'>=</span> <span class='no'>wb</span>,
                   <span class='kw'>sheet</span> <span class='kw'>=</span> <span class='fl'>1</span>,
                   <span class='kw'>name</span> <span class='kw'>=</span> <span class='st'>"iris"</span>,
@@ -163,19 +163,19 @@
 
 
 <span class='co'>## using writeData 'name' argument</span>
-<span class='fu'>writeData</span>(<span class='no'>wb</span>, <span class='kw'>sheet</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>iris</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='st'>"iris2"</span>, <span class='kw'>startCol</span> <span class='kw'>=</span> <span class='fl'>10</span>)
+<span class='fu'><a href='writeData.html'>writeData</a></span>(<span class='no'>wb</span>, <span class='kw'>sheet</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>iris</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='st'>"iris2"</span>, <span class='kw'>startCol</span> <span class='kw'>=</span> <span class='fl'>10</span>)
 
 <span class='no'>out_file</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>(<span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".xlsx"</span>)
-<span class='kw'>if</span> (<span class='fl'>FALSE</span>) <span class='fu'>saveWorkbook</span>(<span class='no'>wb</span>, <span class='no'>out_file</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) <span class='fu'><a href='saveWorkbook.html'>saveWorkbook</a></span>(<span class='no'>wb</span>, <span class='no'>out_file</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
 <span class='co'>## see named regions</span>
-<span class='fu'>getNamedRegions</span>(<span class='no'>wb</span>) <span class='co'>## From Workbook object</span></div><div class='output co'>#&gt; [1] "iris"  "iris2"
+<span class='fu'><a href='getNamedRegions.html'>getNamedRegions</a></span>(<span class='no'>wb</span>) <span class='co'>## From Workbook object</span></div><div class='output co'>#&gt; [1] "iris"  "iris2"
 #&gt; attr(,"sheet")
 #&gt; [1] "Sheet 1" "Sheet 1"
 #&gt; attr(,"position")
-#&gt; [1] "A1:E151" "J1:N151"</div><div class='input'><span class='fu'>getNamedRegions</span>(<span class='no'>out_file</span>) <span class='co'>## From xlsx file</span></div><div class='output co'>#&gt; <span class='error'>Error in getNamedRegions.default(out_file): File '/tmp/Rtmp64IvDG/file36665558f463.xlsx' does not exist.</span></div><div class='input'>
+#&gt; [1] "A1:E151" "J1:N151"</div><div class='input'><span class='fu'><a href='getNamedRegions.html'>getNamedRegions</a></span>(<span class='no'>out_file</span>) <span class='co'>## From xlsx file</span></div><div class='output co'>#&gt; <span class='error'>Error in getNamedRegions.default(out_file): File '/tmp/RtmpxP2XZQ/file12d59461cf48d.xlsx' does not exist.</span></div><div class='input'>
 <span class='co'>## read named regions</span>
-<span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'>read.xlsx</span>(<span class='no'>wb</span>, <span class='kw'>namedRegion</span> <span class='kw'>=</span> <span class='st'>"iris"</span>)
+<span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='read.xlsx.html'>read.xlsx</a></span>(<span class='no'>wb</span>, <span class='kw'>namedRegion</span> <span class='kw'>=</span> <span class='st'>"iris"</span>)
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>df</span>)</div><div class='output co'>#&gt;   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 #&gt; 1          5.1         3.5          1.4         0.2  setosa
 #&gt; 2          4.9         3.0          1.4         0.2  setosa
@@ -183,7 +183,7 @@
 #&gt; 4          4.6         3.1          1.5         0.2  setosa
 #&gt; 5          5.0         3.6          1.4         0.2  setosa
 #&gt; 6          5.4         3.9          1.7         0.4  setosa</div><div class='input'>
-<span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'>read.xlsx</span>(<span class='no'>out_file</span>, <span class='kw'>namedRegion</span> <span class='kw'>=</span> <span class='st'>"iris2"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in read.xlsx.default(out_file, namedRegion = "iris2"): File does not exist.</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>df</span>)</div><div class='output co'>#&gt;   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+<span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='read.xlsx.html'>read.xlsx</a></span>(<span class='no'>out_file</span>, <span class='kw'>namedRegion</span> <span class='kw'>=</span> <span class='st'>"iris2"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in read.xlsx.default(out_file, namedRegion = "iris2"): File does not exist.</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>df</span>)</div><div class='output co'>#&gt;   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 #&gt; 1          5.1         3.5          1.4         0.2  setosa
 #&gt; 2          4.9         3.0          1.4         0.2  setosa
 #&gt; 3          4.7         3.2          1.3         0.2  setosa
@@ -212,7 +212,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>
